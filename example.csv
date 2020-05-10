@@ -1,4 +1,4 @@
-field1;field2,field3
-row1item1;row1item2;row1item3
-row2item1;row2item2;row2item3
-row3item1;row3item2;row3item3
+field1,field2,field3
+row1item1,row1item2,row1item3
+row2item1,row2item2,row2item3
+row3item1,row3item2,row3item3
