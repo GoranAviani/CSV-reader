@@ -1,9 +1,14 @@
 import csv
 
 def load_file(file_name):
-    with open(file_name) as file:
-        file_data = [row for row in csv.DictReader(file)]
-    return file_data
+    try:
+        with open(file_name) as file:
+            file_data = [row for row in csv.DictReader(file)]
+    # parent of IOError, OSError *and* WindowsError where available
+    except EnvironmentError as e:
+        print(e)
+    else:
+        return file_data
 
 def main():
     filename = "example.csv"
