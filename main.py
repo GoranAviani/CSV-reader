@@ -29,10 +29,8 @@ def reader(file_data):
     print(file_data)
 
     for row in file_data:
-        test = row
-       # print(row)
-        if row["field1"] == "row2item1":
-            print("found")
+        if row["field1"] == "row2item1" and row["field2"] == "row2item2":
+            print(row)
 
 if __name__=="__main__":
     main()
