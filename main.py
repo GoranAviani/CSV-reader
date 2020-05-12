@@ -1,6 +1,13 @@
 import csv
 
 def load_file(file_name):
+    """
+    Goal: Load data from csv file
+    Story: Loading data from the csv file using DictReader method.
+    Looping over each row of that data and saving it as a ordered dict
+    :param file_name: String containing a name of the csv file
+    :return: data loaded from the csv file
+    """
     try:
         with open(file_name) as file:
             file_data = [row for row in csv.DictReader(file)]
@@ -18,12 +25,11 @@ def main():
 
 def reader(file_data):
     header = file_data[0].keys()
-    print(header)
     print(file_data)
 
     for row in file_data:
         test = row
-        print(row)
+       # print(row)
         if row["field1"] == "row2item1":
             print("found")
 
